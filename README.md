@@ -21,6 +21,7 @@ npm run lint
 ```
 
 ### git commit
+```
 git init
 git add README.md
 git commit -m "first commit"
@@ -32,15 +33,20 @@ git push -u origin main
 git add .
 git commit -m "😤 뷰 첫 커밋 완료"
 git push -u origin main
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 설치 패키지
+```
 npm install -g json-server
 npm install axios
+```
 
 ### 실행 명령어
+```
 npm run serve
 json-server --watch db.json
+```
 
