@@ -42,6 +42,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 npm install -g json-server
 npm install axios
+npm install vue-router
+npm install lodash
 ```
 
 ### 실행 명령어
