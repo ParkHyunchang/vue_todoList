@@ -41,7 +41,7 @@
 <script>
 import { useRoute, useRouter } from 'vue-router';
 import axios from '@/axios';
-import { ref, computed, onUpdated } from 'vue';
+import { ref, computed } from 'vue';
 import _ from 'lodash';
 import Toast from '@/components/Toast.vue';
 import { useToast } from '@/composables/toast';
@@ -66,9 +66,7 @@ export default {
             completed: false,
             body: ''
         });
-        onUpdated(() => {
-            console.log(todo.value.subject)
-        })
+
         const subjectError = ref('');
         const originalTodo = ref(null);
         const loading = ref(false);
@@ -140,6 +138,12 @@ export default {
 
                 const message = 'Successfully ' + (props.editing ? 'Updated!' : 'Created!');
                 triggerToast(message);
+
+                if (!props.editing) {
+                    router.push({
+                        name: 'Todos'
+                    })
+                }
             } catch (error) {
                 console.log(error);
                 triggerToast('Something went wrong', 'danger')
@@ -161,7 +165,7 @@ export default {
     }
 }
 </script>
-  
+
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {

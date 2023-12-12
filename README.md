@@ -44,6 +44,7 @@ npm install -g json-server
 npm install axios
 npm install vue-router
 npm install lodash
+npm install vuex@next --save
 ```
 
 ### 실행 명령어
