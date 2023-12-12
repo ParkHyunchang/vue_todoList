@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <router-link class="navbar-brand" :to="{ name: 'Home' }">
-            Kossie Coder
+            hyunchang
         </router-link>
 
         <ul class="navbar-nav mr-auto">
